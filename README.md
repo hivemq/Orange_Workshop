@@ -44,4 +44,4 @@ mqtt pub -u superuser -pw supersecurepassword -t to-kafka/test -m kamiel
 
 See in Redpanda console the MQTT sent message apear in the correct topic:
 
-[http://localhost:8090/topics/](https://http://localhost:8090/topics/)
+[http://localhost:8090/topics/](http://localhost:8090/topics/)
