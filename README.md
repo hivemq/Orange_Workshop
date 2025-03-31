@@ -20,9 +20,9 @@ Prerequisite :
 ## What is the goal of the training ?
 
 The aim of this workshop is to train our partners' teams in the installation and advanced configuration of the HiveMQ platform.
-After attending to the workshop, you will be able to implement a production site with best practices on security and enterprise extensions configured. 
+After attending to the workshop, you will be able to implement a production site with best practices on security and enterprise extensions configured.
 
-
+for a detailed view click [here](https://github.com/hivemq/Orange_Workshop/blob/main/Overview.pdf)
 
 ## Preparations :
 
