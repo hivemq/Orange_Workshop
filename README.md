@@ -6,7 +6,23 @@ Welcome. ....
 
 ![](assets/20250331_121615_01-hivemq.png)
 
-..
+## Who this workshop is for ?
+
+his session is aimed at our partners' technical teams. We take a closer look at the platform, its different bricks and how they work.
+
+We will cover topic like enterprise broker deployment and security, extension configuration, DataHub policies and transformations, HiveMQ Edge and it’s protocol adapters.
+
+Prerequisite :
+
+* Have a good understanding of HiveMQ Platform.
+* Have basic knowledge Docker and linux.
+
+## What is the goal of the training ?
+
+The aim of this workshop is to train our partners' teams in the installation and advanced configuration of the HiveMQ platform.
+After attending to the workshop, you will be able to implement a production site with best practices on security and enterprise extensions configured. 
+
+
 
 ## Preparations :
 
