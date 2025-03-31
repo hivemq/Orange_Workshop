@@ -16,23 +16,32 @@ Have Docker, Docker Compose and the HiveMQ CLI installed:
 
 ## Clone
 
+To get the resources please run the following command in your terminal:
+
+```
 git clone https://github.com/hivemq/Orange_Workshop.git
+```
 
-## start :
+## Start :
 
-to start please run the following command in your terminal
+to start please run the following command in your terminal:
 
 ```
 export HIVEMQ_VERSION=4.38.0
 export REDPANDA_VERSION=24.2.7
 export REDPANDA_CONSOLE_VERSION=2.7.2
-./build.sh
+./build.sh # #### run once  
 docker-compose up -d  --build --force-recreate
 ```
 
 ## test:
 
+Send some MQTT data towards the Kafka propagation topic
+
 ```
 mqtt pub -u superuser -pw supersecurepassword -t to-kafka/test -m kamiel
-http://localhost:8090/topics/
 ```
+
+See in Redpanda console the MQTT sent message apear in the correct topic:
+
+[http://localhost:8090/topics/](https://http://localhost:8090/topics/)
