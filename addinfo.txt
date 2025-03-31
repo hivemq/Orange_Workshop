@@ -7,6 +7,7 @@ start :
 export HIVEMQ_VERSION=4.38.0
 export REDPANDA_VERSION=24.2.7
 export REDPANDA_CONSOLE_VERSION=2.7.2
+./build.sh
 docker-compose up -d  --build --force-recreate
 
 test:
