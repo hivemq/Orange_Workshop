@@ -2,16 +2,21 @@
 
 Welcome. ....
 
-
 ## Preparations :
 
-Have Docker and Docker Compose installed
+Have Docker, Docker Compose and the HiveMQ CLI installed:
 
 [https://docs.docker.com/engine/install/](https://https://docs.docker.com/engine/install/)
 
 [https://docs.docker.com/compose/install/](https://https://docs.docker.com/compose/install/)
 
+[HiveMQ CLI](https://https://www.hivemq.com/blog/mqtt-cli/)
 
+[Git CLI](https://https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) or [GitDesktop](https://https://desktop.github.com/download/)
+
+## Clone
+
+git clone https://github.com/hivemq/Orange_Workshop.git
 
 ## start :
 
