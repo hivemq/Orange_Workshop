@@ -1,0 +1,33 @@
+Create image:
+HIVEMQ_VERSION=4.38.0 ./build.sh
+
+
+start :
+
+export HIVEMQ_VERSION=4.38.0
+export REDPANDA_VERSION=24.2.7
+export REDPANDA_CONSOLE_VERSION=2.7.2
+docker-compose up -d  --build --force-recreate
+
+test:
+
+mqtt pub -u superuser -pw supersecurepassword -t to-kafka/test -m kamiel
+http://localhost:8090/topics/
+
+
+
+mqtt test -u superuser -pw supersecurepassword        
+
+
+docker ps
+docker exec -it 144e771fd729 psql -U hivemq -d hivemq_ESE -c "SELECT * FROM public.users;"
+
+REDPANDA_VERSION=24.2.7 docker-compose  -f rp-compose.yaml -d  --build --force-recreate up 
+
+export HIVEMQ_VERSION=4.38.0
+export REDPANDA_VERSION=24.2.7
+export REDPANDA_CONSOLE_VERSION=2.7.2
+docker-compose up -d  --build --force-recreate
+
+mqtt pub -u superuser -pw supersecurepassword -t to-kafka/test -m kamiel
+http://localhost:8090/topics/
