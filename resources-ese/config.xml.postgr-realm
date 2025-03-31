@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<enterprise-security-extension
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="config.xsd"
+        version="1">
+    <realms>
+        <!-- a postgresql db-->
+        <sql-realm>
+            <name>postgres-backend</name> 
+            <enabled>true</enabled>
+            <configuration>
+                <db-type>POSTGRES</db-type>
+                <db-name>hivemq_ESE</db-name> 
+                <db-host>postgres_db</db-host> 
+                <db-port>5432</db-port>
+                <db-username>hivemq</db-username> 
+                <db-password>secretpassword</db-password> 
+            </configuration>
+        </sql-realm>
+    </realms>
+    
+    <pipelines>
+        <listener-pipeline listener="ALL"> 
+            <!-- authenticate over a sql db -->
+            <sql-authentication-manager>
+                <realm>postgres-backend</realm> 
+            </sql-authentication-manager>
+            <!-- authorize over a sql db -->
+            <sql-authorization-manager>
+                <realm>postgres-backend</realm>
+                <use-authorization-key>false</use-authorization-key>
+                <use-authorization-role-key>true</use-authorization-role-key>
+            </sql-authorization-manager>
+        </listener-pipeline>
+    </pipelines>
+</enterprise-security-extension>
