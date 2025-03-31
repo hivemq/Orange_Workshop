@@ -34,11 +34,15 @@ Have Docker, Docker Compose, Git, PgAdmin (optional) and the HiveMQ CLI installe
 
 [HiveMQ CLI](https://https://www.hivemq.com/blog/mqtt-cli/)
 
+### Usefull additional software :
+
 [PgAdmin](https://https://www.pgadmin.org/download/)
 
 [Git CLI](https://https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) or [GitDesktop](https://https://desktop.github.com/download/)
 
-## Clone
+[MQTT explorer](https://mqtt-explorer.com/)
+
+## Get it / Clone :
 
 To get the resources please run the following command in your terminal:
 
@@ -46,7 +50,7 @@ To get the resources please run the following command in your terminal:
 git clone https://github.com/hivemq/Orange_Workshop.git
 ```
 
-## Start :
+## Use it / Start :
 
 to start please `cd` into the `Orange_Workshop` directory and run the following commands:
 
@@ -58,7 +62,7 @@ export REDPANDA_CONSOLE_VERSION=2.7.2
 docker-compose up -d  --build --force-recreate
 ```
 
-## test:
+## and test it :
 
 Send some MQTT data towards the Kafka propagation topic
 
