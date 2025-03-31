@@ -42,6 +42,6 @@ Send some MQTT data towards the Kafka propagation topic
 mqtt pub -u superuser -pw supersecurepassword -t to-kafka/test -m kamiel
 ```
 
-See in Redpanda console the MQTT sent message apear in the correct topic:
+See in Redpanda console the MQTT sent message apear in the correct `kafka-topic` topic:
 
 [http://localhost:8090/topics/](http://localhost:8090/topics/)
