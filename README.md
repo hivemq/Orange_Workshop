@@ -8,7 +8,7 @@ Welcome. ....
 
 ## Who this workshop is for ?
 
-his session is aimed at our partners' technical teams. We take a closer look at the platform, its different bricks and how they work.
+This session is aimed at our partners' technical teams. We take a closer look at the platform, its different bricks and how they work.
 
 We will cover topic like enterprise broker deployment and security, extension configuration, DataHub policies and transformations, HiveMQ Edge and it’s protocol adapters.
 
@@ -22,7 +22,7 @@ Prerequisite :
 The aim of this workshop is to train our partners' teams in the installation and advanced configuration of the HiveMQ platform.
 After attending to the workshop, you will be able to implement a production site with best practices on security and enterprise extensions configured.
 
-for a detailed view click [here](https://github.com/hivemq/Orange_Workshop/blob/main/Overview.pdf)
+For a more detailed view click [here](https://github.com/hivemq/Orange_Workshop/blob/main/Overview.pdf)
 
 ## Preparations :
 

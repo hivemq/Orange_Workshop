@@ -52,13 +52,13 @@ FROM eclipse-temurin:21.0.4_7-jre-jammy@sha256:d1c536be5ba42ea6d793b8eb67b8ced61
 ENV JAVA_OPTS="-XX:+UnlockExperimentalVMOptions -XX:+UseNUMA"
 
 # Default allow all extension, set this to false to disable it
-ENV HIVEMQ_ALLOW_ALL_CLIENTS=false
+ENV HIVEMQ_ALLOW_ALL_CLIENTS=true
 
 # Enable ESE, set this to false to disable it
-ENV HIVEMQ_ENABLE_ESE=true
+ENV HIVEMQ_ENABLE_ESE=false
 
 # Enable Kafka extention, set this to false to disable it
-ENV HIVEMQ_ENABLE_KAFKA=true
+ENV HIVEMQ_ENABLE_KAFKA=false
 
 # Enable REST API default value
 ENV HIVEMQ_REST_API_ENABLED=true
