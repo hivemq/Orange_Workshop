@@ -9,6 +9,11 @@ RUN unzip /tmp/hivemq.zip -d /opt \
     && rm -rf /opt/hivemq/tools/hivemq-swarm
 COPY config.xml /opt/hivemq/conf/config.xml
 
+COPY hivemq-prometheus-extension-4.0.12.zip /tmp/hivemq-prometheus-extension-4.0.12.zip
+RUN unzip /tmp/hivemq-prometheus-extension-4.0.12.zip -d /opt/hivemq/extensions 
+    # && rm -rf /opt/hivemq/tools/hivemq-swarm
+
+
 # COPY ESE configfile from local resources-ese/*.* into image.
 COPY ./resources-ese/*.* /opt/hivemq/extensions/hivemq-enterprise-security-extension/conf
 
@@ -95,7 +100,9 @@ VOLUME /opt/hivemq/log
 # MQTT Websocket listener: 8000
 # HiveMQ Control Center: 8080
 # HiveMQ API : 8888
-EXPOSE 1883 8000 8080 8888
+# prometius ext : 9399
+EXPOSE 1883 8000 8080 8888 9399
+
 
 WORKDIR /opt/hivemq
 
