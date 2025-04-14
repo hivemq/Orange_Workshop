@@ -125,11 +125,6 @@ services:
     depends_on:
       - prometheus
 
-
-
-
-
-
       
 volumes:
   hivemq_data:

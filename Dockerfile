@@ -20,6 +20,10 @@ COPY ./resources-ese/*.* /opt/hivemq/extensions/hivemq-enterprise-security-exten
 # COPY kafka configfile from local resources-kafka/*.* into image.
 COPY ./resources-kafka/*.* /opt/hivemq/extensions/hivemq-kafka-extension/conf
 
+# COPY Postgress configfile from local resources-kafka/*.* into image.
+COPY ./resources-postgres/*.* /opt/hivemq/extensions/hivemq-postgresql-extension/conf
+
+
 RUN find /opt/hivemq -type d -print0 | xargs -0 chmod 750 \
     && find /opt/hivemq -type f -print0 | xargs -0 chmod 640 \
     # files that need execute permissions
@@ -65,6 +69,9 @@ ENV HIVEMQ_ENABLE_ESE=false
 # Enable Kafka extention, set this to false to disable it
 ENV HIVEMQ_ENABLE_KAFKA=false
 
+# Enable Postgres extention, set this to false to disable it
+ENV HIVEMQ_ENABLE_POSTGRES=true
+
 # Enable REST API default value
 ENV HIVEMQ_REST_API_ENABLED=true
 
@@ -84,6 +91,8 @@ COPY --chmod=755 docker-entrypoint.sh /opt/docker-entrypoint.sh
 COPY --chmod=644 20_handle_envs.sh /docker-entrypoint.d/20_handle_envs.sh
 COPY --chmod=644 30_enable_ese.sh /docker-entrypoint.d/30_enable_ese.sh
 COPY --chmod=644 40_enable_kafka.sh /docker-entrypoint.d/40_enable_kafka.sh
+COPY --chmod=644 50_enable_postgres.sh /docker-entrypoint.d/50_enable_postgres.sh
+
 RUN mkdir -p /docker-entrypoint.d
 
 # HiveMQ
