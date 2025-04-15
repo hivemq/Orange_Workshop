@@ -40,6 +40,16 @@ services:
       HIVEMQ_DATABASE_PORT: 5432
       HIVEMQ_DATABASE_USER: hivemq
       HIVEMQ_DATABASE_PASSWORD: secretpassword
+
+  swarm:
+    build:
+      context: .
+      dockerfile: Dockerfile-Swarm 
+      args:
+        HIVEMQ_VERSION: ${HIVEMQ_VERSION}
+    container_name: hivemq_swarm
+
+      
   redpanda-0:
     command:
       - redpanda

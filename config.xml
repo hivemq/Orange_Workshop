@@ -2,6 +2,11 @@
 <hivemq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="config.xsd">
 
+
+    <cluster>
+        <enabled>true</enabled>
+    </cluster>    
+    
     <listeners>
         <tcp-listener>
             <port>1883</port>
