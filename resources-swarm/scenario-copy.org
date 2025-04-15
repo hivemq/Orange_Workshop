@@ -13,14 +13,14 @@
     <clientGroups>
         <clientGroup id="cg1">
             <clientIdPattern>A[0-9]{4}</clientIdPattern>
-            <count>4</count>
+            <count>10</count>
         </clientGroup>
     </clientGroups>
 
     <topicGroups>
         <topicGroup id="tg1">
-            <topicNamePattern>temp/subtopic-[0-9]</topicNamePattern>
-            <count>3</count>
+            <topicNamePattern>topic/subtopic-[0-9]</topicNamePattern>
+            <count>10</count>
         </topicGroup>
     </topicGroups>
 
@@ -29,9 +29,7 @@
         <stage id="s1">
             <lifeCycle id="publish" clientGroup="cg1">
                 <connect broker="b1"/>
-                <publish topicGroup="tg1" count="100" message=' {   "SensorID": "CMD-Line",  "temperature": 22.54 } '  rate="1/5s"/>
-
-
+                <publish topicGroup="tg1" count="100" message="30" payloadGeneratorType="random" rate="1/1s"/>
             </lifeCycle>
         </stage>
     </stages>
