@@ -83,12 +83,14 @@ VOLUME /opt/hivemq/log
 # HiveMQ Control Center: 8080
 # HiveMQ API : 8888
 # prometius ext : 9399
-EXPOSE 1883 8000 8080 8888 9399
+# EXPOSE 1883 8000 8080 8888 9399
 
 
-WORKDIR /opt/hivemq
+WORKDIR /opt/hivemq/tools/hivemq-swarm/bin
 
 ENTRYPOINT ["/opt/docker-entrypoint.sh"]
+# CMD ["/opt/hivemq/tools/hivemq-swarm/bin/hivemq-swarm -S /opt/hivemq/tools/hivemq-swarm/scenario/scenario.xml.vm"]
+# CMD ["/opt/hivemq/tools/hivemq-swarm/bin/hivemq-swarm -S /opt/hivemq/tools/hivemq-swarm/scenario/scenario.xml"]
 CMD ["/opt/hivemq/tools/hivemq-swarm/bin/hivemq-swarm"]
 
 USER 10000

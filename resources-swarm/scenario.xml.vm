@@ -1,5 +1,10 @@
+<?xml version="1.0"?>
+#set($my_rnd=$mathTool.random(1,20)) 
+
 <scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:noNamespaceSchemaLocation="scenario.xsd">
+
+
 
     <!-- to be uploaded to Swarm worker container -->
 
@@ -9,27 +14,23 @@
             <port>1883</port>
         </broker>
     </brokers>
-
     <clientGroups>
         <clientGroup id="cg1">
             <clientIdPattern>A[0-9]{4}</clientIdPattern>
-            <count>10</count>
+            <count>4</count>
         </clientGroup>
     </clientGroups>
-
     <topicGroups>
         <topicGroup id="tg1">
-            <topicNamePattern>topic/subtopic-[0-9]</topicNamePattern>
-            <count>10</count>
+            <topicNamePattern>temp/subtopic-[0-9]</topicNamePattern>
+            <count>3</count>
         </topicGroup>
     </topicGroups>
-
     <stages>
-        <!-- 3 -->
         <stage id="s1">
             <lifeCycle id="publish" clientGroup="cg1">
                 <connect broker="b1"/>
-                <publish topicGroup="tg1" count="100" message="30" payloadGeneratorType="random" rate="1/1s"/>
+                <publish topicGroup="tg1" count="100" message=' {  "Version": 1.0,  "SensorID": "CMD-Line",  "temperature": $my_rnd } '  rate="1/5s"/>
             </lifeCycle>
         </stage>
     </stages>

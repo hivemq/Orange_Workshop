@@ -50,6 +50,14 @@ To get the resources please run the following command in your terminal:
 git clone https://github.com/hivemq/Orange_Workshop.git
 ```
 
+## What do you get ?
+
+ds
+
+
+![](assets/20250416_221641_docker-overviewv1.png)
+
+
 ## Use it / Start :
 
 to start please `cd` into the `Orange_Workshop` directory and run the following commands:
@@ -58,8 +66,16 @@ to start please `cd` into the `Orange_Workshop` directory and run the following 
 export HIVEMQ_VERSION=4.38.0
 export REDPANDA_VERSION=24.2.7
 export REDPANDA_CONSOLE_VERSION=2.7.2
-./build.sh # #### run once  
+export PROM_VERSION=4.0.12
+./build.sh
 docker-compose up -d  --build --force-recreate
+sleep 15
+curl  -X POST localhost:8888/api/v1/data-hub/management/start-trial
+mqtt hivemq schema create --id=mytemp-in-schema   --file=./resources-datahub/mytemp-in-schema.json   --type=json
+mqtt hivemq schema create --id=mytemp-out-schema   --file=./resources-datahub/mytemp-out-schema.json   --type=json
+mqtt hivemq script create --id=add_timestamp --file=./resources-datahub/add_timestamp.js --type=transformation
+mqtt hivemq data-policy create --file=./resources-datahub/add_ts_policy.json
+mqtt pub -t temp/test --message-file=./resources-datahub/mytemp.json
 ```
 
 ## and test it :
