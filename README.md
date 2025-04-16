@@ -52,11 +52,9 @@ git clone https://github.com/hivemq/Orange_Workshop.git
 
 ## What do you get ?
 
-ds
-
+The following docker based setup will be launched:
 
 ![](assets/20250416_221641_docker-overviewv1.png)
-
 
 ## Use it / Start :
 
@@ -69,7 +67,8 @@ export REDPANDA_CONSOLE_VERSION=2.7.2
 export PROM_VERSION=4.0.12
 ./build.sh
 docker-compose up -d  --build --force-recreate
-sleep 15
+
+sleep 15 # the following command need the local install of HiveMQ CLI tools.
 curl  -X POST localhost:8888/api/v1/data-hub/management/start-trial
 mqtt hivemq schema create --id=mytemp-in-schema   --file=./resources-datahub/mytemp-in-schema.json   --type=json
 mqtt hivemq schema create --id=mytemp-out-schema   --file=./resources-datahub/mytemp-out-schema.json   --type=json
