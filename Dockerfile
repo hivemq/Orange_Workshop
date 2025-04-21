@@ -78,7 +78,7 @@ ENV HIVEMQ_ENABLE_POSTGRES=true
 ENV HIVEMQ_REST_API_ENABLED=true
 
 # Whether we should print additional debug info for the entrypoints
-ENV HIVEMQ_VERBOSE_ENTRYPOINT=true
+ENV HIVEMQ_VERBOSE_ENTRYPOINT=false
 
 # Set locale
 ENV LANG=en_US.UTF-8
