@@ -1,6 +1,6 @@
 # Orange Workshop
 
-Welcome. ....
+v1.0 - Welcome. ....
 
 ![](assets/20250331_121233_Orange_logo.svg.png)
 
