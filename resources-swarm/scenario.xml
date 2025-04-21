@@ -1,6 +1,4 @@
 <?xml version="1.0"?>
-#set($my_rnd=$mathTool.random(1,20)) 
-
 <scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:noNamespaceSchemaLocation="scenario.xsd">
 
@@ -30,7 +28,7 @@
         <stage id="s1">
             <lifeCycle id="publish" clientGroup="cg1">
                 <connect broker="b1"/>
-                <publish topicGroup="tg1" count="100" message=' {  "Version": 1.0,  "SensorID": "CMD-Line",  "temperature": $my_rnd } '  rate="1/5s"/>
+                <publish topicGroup="tg1" count="100" message=' {  "Version": 1.0,  "SensorID": "Swarm-Sim",  "temperature": 23.3 } '  rate="1/5s"/>
             </lifeCycle>
         </stage>
     </stages>

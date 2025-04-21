@@ -1,0 +1,4 @@
+"SensorID " : "file"
+(json_data->>'isotime'):: timestamp AS isotime,
+(json_data->>'unixtime')::numeric AS isotime,
+(json_data->>'temperature')::numeric AS temperature /* casting from text to numic value ! */

@@ -11,7 +11,7 @@ COPY config.xml /opt/hivemq/conf/config.xml
 
 COPY hivemq-prometheus-extension-4.0.12.zip /tmp/hivemq-prometheus-extension-4.0.12.zip
 RUN unzip /tmp/hivemq-prometheus-extension-4.0.12.zip -d /opt/hivemq/extensions 
-    # && rm -rf /opt/hivemq/tools/hivemq-swarm
+
 
 
 # COPY ESE configfile from local resources-ese/*.* into image.
@@ -72,7 +72,7 @@ ENV HIVEMQ_ENABLE_ESE=false
 ENV HIVEMQ_ENABLE_KAFKA=false
 
 # Enable Postgres extention, set this to false to disable it
-ENV HIVEMQ_ENABLE_POSTGRES=false
+ENV HIVEMQ_ENABLE_POSTGRES=true
 
 # Enable REST API default value
 ENV HIVEMQ_REST_API_ENABLED=true
