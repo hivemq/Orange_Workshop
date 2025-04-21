@@ -46,6 +46,7 @@ Have Docker, Docker Compose, Git, PgAdmin (optional) and the HiveMQ CLI installe
 
 To get the resources please run the following command in your terminal:
 On Mac / Linux :
+
 ```
 git clone https://github.com/hivemq/Orange_Workshop.git
 ```
@@ -54,7 +55,6 @@ git clone https://github.com/hivemq/Orange_Workshop.git
 git config --global core.autocrlf false 
 git clone https://github.com/hivemq/Orange_Workshop.git
 ```
-
 
 ## What do you get ?
 
@@ -65,6 +65,8 @@ The following docker based setup will be launched:
 ## Use it / Start :
 
 to start please `cd` into the `Orange_Workshop` directory and run the following commands:
+
+On MAc:
 
 ```
 export HIVEMQ_VERSION=4.38.0
@@ -83,14 +85,17 @@ mqtt hivemq data-policy create --file=./resources-datahub/add_ts_policy.json
 mqtt pub -t temp/test --message-file=./resources-datahub/mytemp.json
 ```
 
+And on Windows:
+
+```
+$env:HIVEMQ_VERSION="4.38.0"
+$env:REDPANDA_VERSION="24.2.7"
+$env:REDPANDA_CONSOLE_VERSION="2.7.2"
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+./build.ps1
+docker-compose up -d  --build --force-recreate
+```
+
 ## and test it :
 
-Send some MQTT data towards the Kafka propagation topic
-
-```
-mqtt pub -u superuser -pw supersecurepassword -t to-kafka/test -m kamiel
-```
-
-See in Redpanda console the MQTT sent message apear in the correct `kafka-topic` topic:
-
-[http://localhost:8090/topics/](http://localhost:8090/topics/)
+Send some MQTT data
