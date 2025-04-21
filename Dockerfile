@@ -72,13 +72,13 @@ ENV HIVEMQ_ENABLE_ESE=false
 ENV HIVEMQ_ENABLE_KAFKA=false
 
 # Enable Postgres extention, set this to false to disable it
-ENV HIVEMQ_ENABLE_POSTGRES=true
+ENV HIVEMQ_ENABLE_POSTGRES=false
 
 # Enable REST API default value
 ENV HIVEMQ_REST_API_ENABLED=true
 
 # Whether we should print additional debug info for the entrypoints
-ENV HIVEMQ_VERBOSE_ENTRYPOINT=false
+ENV HIVEMQ_VERBOSE_ENTRYPOINT=true
 
 # Set locale
 ENV LANG=en_US.UTF-8

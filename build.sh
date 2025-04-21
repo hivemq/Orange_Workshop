@@ -6,6 +6,8 @@ cd ${DIR}
 
 IMAGE_NAME=${TARGETIMAGE:-hivemq/hivemq4:$HIVEMQ_VERSION}
 
+echo $IMAGE_NAME
+
 #download HiveMQ binary
 [ -f "hivemq-${HIVEMQ_VERSION}.zip" ] || (curl -L https://releases.hivemq.com/hivemq-${HIVEMQ_VERSION}.zip -o hivemq-${HIVEMQ_VERSION}.zip)
 
