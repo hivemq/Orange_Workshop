@@ -1,6 +1,6 @@
 # Orange Workshop
 
-v1.0 - Welcome. ....
+v210425-1752 - Welcome. ....
 
 ![](assets/20250331_121233_Orange_logo.svg.png)
 
@@ -45,10 +45,16 @@ Have Docker, Docker Compose, Git, PgAdmin (optional) and the HiveMQ CLI installe
 ## Get it / Clone :
 
 To get the resources please run the following command in your terminal:
-
+On Mac / Linux :
 ```
 git clone https://github.com/hivemq/Orange_Workshop.git
 ```
+
+```
+git config --global core.autocrlf false 
+git clone https://github.com/hivemq/Orange_Workshop.git
+```
+
 
 ## What do you get ?
 

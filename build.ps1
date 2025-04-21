@@ -1,6 +1,6 @@
-SET HIVEMQ_VERSION=4.38.0
-SET REDPANDA_VERSION=24.2.7
-SET REDPANDA_CONSOLE_VERSION=2.7.2
+$env:HIVEMQ_VERSION="4.38.0"
+$env:REDPANDA_VERSION="24.2.7"
+$env:REDPANDA_CONSOLE_VERSION="2.7.2"
 
 
 C:\Windows\System32\curl.exe -C - -L https://releases.hivemq.com/hivemq-4.38.0.zip -o hivemq-4.38.0.zip
