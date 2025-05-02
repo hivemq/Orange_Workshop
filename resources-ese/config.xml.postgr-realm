@@ -8,7 +8,7 @@
         <sql-realm>
             <name>postgres-backend</name> 
             <enabled>true</enabled>
-            <configuration>
+            <configuration>            
                 <db-type>POSTGRES</db-type>
                 <db-name>hivemq_ESE</db-name> 
                 <db-host>postgres_db</db-host> 
